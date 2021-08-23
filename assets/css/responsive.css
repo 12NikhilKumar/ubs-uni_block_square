@@ -668,11 +668,12 @@
   }
   .rs-project.style1 .video-part {
     border-radius: 0;
-    max-width: 640px;
+    max-width: 340px;
     margin: 0 auto 60px;
   }
-  .rs-project.style1 .video-part img {
+  .rs-project.style1 .video-part .img {
     border-radius: 6px;
+    width: 80%;
   }
   .rs-specialty.style1 .specialty-grid {
     padding: 20px 15px 40px;
@@ -1727,7 +1728,8 @@
   }
 
   .full-width-header .rs-header .menu-area .rs-menu-toggle i {
-    margin: 0;
+    margin: 10px;
+    width: 50%;
   }
   .full-width-header.header-style-4
     .rs-header
@@ -4026,8 +4028,8 @@
   .full-width-header .rs-header .menu-area.sticky .logo-area img,
   .rs-footer .footer-content .about-widget .logo-part a img,
   .full-width-header .rs-header .menu-area .logo-area img {
-    max-height: 25px;
-    width: 25%;
+    max-height: 55px;
+    width: 80%;
   }
   .rs-about.style1 .services-part .services-text {
     padding-left: 0;

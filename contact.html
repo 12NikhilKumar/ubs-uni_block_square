@@ -300,7 +300,11 @@
               </div>
               <div class="col-md-7 custom2 pl-0">
                 <div id="form-messages"></div>
-                <form id="contact-form" method="post" action="">
+                <form
+                  id="contact-form" method=”POST”
+                  enctype=”multipart/form-data”
+                  action="mailto:connect@ubsworld.tech"
+                >
                   <div class="sec-title mb-53 md-mb-42">
                     <div class="sub-title white-color">Let's Talk</div>
                     <h2 class="title white-color mb-0">Get In Touch</h2>
@@ -346,11 +350,7 @@
                       ></textarea>
                     </div>
                     <div class="col-md-12">
-                      <button
-                        type="submit"
-                        class="readon modify"
-                        onclick="sendEmail();"
-                      >
+                      <button type="submit" class="readon modify">
                         Submit Now
                       </button>
                     </div>
@@ -475,20 +475,6 @@
     </div>
     <!-- Search Modal End -->
 
-    <script type="text/javascript">
-      function sendEmail(name, email, message) {
-        Email.send({
-          Host: "smtp.gmail.com",
-          securetoken: "uddnrraixkmribhr",
-          To: "connect@ubsworld.tech",
-          From: "brundhasubramanian@gmail.com",
-          Subject: `Email from ${name}`,
-          Body: `Name: ${name} <br/>Email: ${email} <br/>Message: ${message}`,
-        }).then(function (message) {
-          alert("mail sent successfully");
-        });
-      }
-    </script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <!-- modernizr js -->
     <script src="assets/js/modernizr-2.8.3.min.js"></script>
