@@ -2,17 +2,9 @@ $(document).ready(function () {
   // Strict Mode
   "use strict";
 
-  //Defines variables
-  var arrow_up = '<i class="fa fa-angle-up" aria-hidden="true"></i>';
-  var arrow_down = '<i class="fa fa-angle-down" aria-hidden="true"></i>';
-  var arrow_span = '<span class="rs-menu-parent">' + arrow_down + "</span>";
+  //Defines variables\
   var close_button =
     '<div class="sub-menu-close"><i class="fa fa-times" aria-hidden="true"></i>Close</div>';
-
-  //Insert all arrow down span element
-  $(".nav-menu .rs-mega-menu").append(arrow_span);
-  $(".nav-menu > .menu-item").append(arrow_span);
-  $(".nav-menu > .menu-item .sub-menu > .menu-item").append(arrow_span);
 
   //Insert all close button element
   $(".nav-menu .menu-item .sub-menu").append(close_button);
@@ -60,19 +52,6 @@ $(document).ready(function () {
 
     //Close sub menus child parents
     siblings.find("ul.visible").removeClass("visible");
-
-    /*-------------------------------------*/
-    /*	INSERT ARROW DOWN
-		/*-------------------------------------*/
-
-    //Insert arrow down in sub menus
-    parent.children("ul").find(arrow_target).html(arrow_down);
-
-    //Insert arrow down in sub menus parents
-    siblings.children(arrow_target).html(arrow_down);
-
-    //Insert arrow down in sub menus child parents
-    siblings.find(arrow_target).html(arrow_down);
   });
 
   /*-----------------------------------------------------------------------------------*/

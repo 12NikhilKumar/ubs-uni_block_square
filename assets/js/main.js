@@ -48,7 +48,7 @@
   // Progress Bar Round
   $(".rs-pie").each(function () {
     $(this).pieChart({
-      barColor: "#1273eb",
+      barColor: "#8f4a25",
       trackColor: "#eff2f6",
       lineCap: "round",
       lineWidth: 8,
@@ -64,7 +64,7 @@
   // Progress Bar Round 2
   $(".rs-pie2").each(function () {
     $(this).pieChart({
-      barColor: "#1273eb",
+      barColor: "#8f4a25",
       trackColor: "#eff2f6",
       lineCap: "round",
       lineWidth: 8,
