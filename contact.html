@@ -314,6 +314,7 @@
                       <input
                         type="text"
                         name="name"
+                        id="name"
                         placeholder="Name"
                         required=""
                       />
@@ -322,6 +323,7 @@
                       <input
                         type="email"
                         name="email"
+                        id="email"
                         placeholder="E-mail"
                         required=""
                       />
@@ -330,6 +332,7 @@
                       <input
                         type="text"
                         name="phone"
+                        id="phone"
                         placeholder="Phone Number"
                         required=""
                       />
@@ -338,6 +341,7 @@
                       <input
                         type="text"
                         name="website"
+                        id="website"
                         placeholder="Your Website"
                         required=""
                       />
@@ -345,12 +349,13 @@
                     <div class="col-md-12">
                       <textarea
                         name="message"
+                        id="message"
                         placeholder="Your Message Here"
                         required=""
                       ></textarea>
                     </div>
                     <div class="col-md-12">
-                      <button type="submit" class="readon modify">
+                      <button type="submit" class="readon modify" onclick="sendEmail()">
                         Submit Now
                       </button>
                     </div>
@@ -476,6 +481,29 @@
     <!-- Search Modal End -->
 
     <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script type="text/javascript">
+      function sendEmail(form) {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var website = document.getElementById("website").value;
+        var message = document.getElementById("message").value;
+
+        Email.send({
+          SecureToken: "4307f5ba-a33c-4b96-9a9d-6f8371802eb5",
+          To: "unlockyourmindgate@gmail.com",
+          From: "brundhasubramanian@gmail.com",
+          Subject: "Message from " + name,
+          Body: "UBS - Uni Block Square" + "<br/>" +
+              "Name: " + name + "<br/>" +
+              "Email: " + email + "<br/>" +
+              "Phone Number: " + phone + "<br/>" +
+              "Website: " + website + "<br/>" +
+              "Message: " + message,
+        }).then((message) => alert("Sent Successful"));
+      }
+    </script>
     <!-- modernizr js -->
     <script src="assets/js/modernizr-2.8.3.min.js"></script>
     <!-- jquery latest version -->
