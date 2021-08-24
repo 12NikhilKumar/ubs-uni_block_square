@@ -32,7 +32,6 @@ $(document).ready(function () {
       setTimeout(function () {
         menu.removeClass("visible");
       }, 10);
-      t.html(arrow_down);
     } else {
       setTimeout(function () {
         menu.addClass("visible");
@@ -62,7 +61,6 @@ $(document).ready(function () {
 
     var a = $(this).parent("ul");
     a.removeClass("visible");
-    a.siblings("span.rs-menu-parent").html(arrow_down);
   });
 
   /*-----------------------------------------------------------------------------------*/
@@ -107,7 +105,6 @@ $(document).ready(function () {
         .addClass("rs-menu-toggle-close");
       $(".rs-menu").css("height", "0").addClass("rs-menu-close");
 
-      $("span.rs-menu-parent").html(arrow_down);
       window_width = $(window).width();
     }
   });

@@ -627,7 +627,7 @@ Version: 1.0.0
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
   .rs-menu-toggle:hover {
-    color: ##f47521 !important;
+    color: #f47521 !important;
   }
   .rs-menu-toggle i {
     margin-right: 10px;
