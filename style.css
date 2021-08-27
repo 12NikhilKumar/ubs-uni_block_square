@@ -2054,7 +2054,7 @@ ul.page-nav-vertical li:last-child {
 .rs-carousel.nav-style2 .owl-nav {
   display: block;
   position: absolute;
-  top: -80px;
+  top: 80px;
   right: 0;
 }
 .rs-carousel.nav-style2 .owl-nav .owl-prev,
@@ -2086,8 +2086,22 @@ ul.page-nav-vertical li:last-child {
 .rs-carousel.nav-style2 .owl-nav .owl-next i:before {
   content: "\f133";
 }
-.rs-carousel.dot-style1 .owl-dots {
+.rs-carousel.dot-style1 .owl-nav {
   text-align: center;
+}
+.rs-carousel.dot-style1 .owl-nav .owl-prev,
+.rs-carousel.dot-style1 .owl-nav .owl-next {
+  padding: 20px;
+  display: inline-block;
+  opacity: 0.5;
+  align-items: center;
+}
+.rs-carousel.dot-style1 .owl-nav .owl-prev i,
+.rs-carousel.dot-style1 .owl-nav .owl-next i {
+  font-size: 30px;
+  background-color: #f47521;
+  color: #ffffff;
+  transition: all 0.3s ease;
 }
 .rs-carousel.dot-style1 .owl-dots .owl-dot {
   width: 25px;
@@ -2103,8 +2117,10 @@ ul.page-nav-vertical li:last-child {
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.25);
   opacity: 0.5;
 }
-.rs-carousel.dot-style1 .owl-dots .owl-dot:hover {
-  width: 40px;
+.rs-carousel.dot-style1 .owl-nav .owl-prev i:hover,
+.rs-carousel.dot-style1 .owl-nav .owl-next i:hover {
+  color: #f47521;
+  background-color: #ffffff;
   opacity: 1;
 }
 .rs-carousel.dot-style1 .owl-dots .owl-dot.active {
@@ -5076,6 +5092,7 @@ input[type="range"]::-ms-fill-upper {
   -webkit-transition: 0.4s;
   max-height: 60px;
   width: 75%;
+  background-color: #ffffff;
 }
 .full-width-header .rs-header .menu-area .logo-area .dark {
   display: none;
@@ -10996,11 +11013,11 @@ body .modal-backdrop {
     09. Services Section CSS
 ---------------------------------------*/
 .rs-services.style1 .service-wrap {
-  padding: 30px;
   text-align: center;
-  background: #f1f6fc;
+  background: transparent;
   box-shadow: 0px 1px 8px 3px rgba(0, 0, 0, 0.03);
   border-radius: 5px;
+  padding: 5px;
 }
 .rs-services.style1 .service-wrap .icon-part {
   margin-bottom: 25px;
@@ -11013,10 +11030,11 @@ body .modal-backdrop {
   max-width: 58px;
 }
 .rs-services.style1 .service-wrap .content-part .title {
-  margin-bottom: 9px;
+  margin-bottom: 5px;
 }
 .rs-services.style1 .service-wrap .content-part .title a {
   color: #1c1b1b;
+  font-size: 16px;
 }
 .rs-services.style1 .service-wrap .content-part .title a:hover {
   color: rgba(244, 117, 33, 255);
@@ -11183,16 +11201,24 @@ body .modal-backdrop {
   font-size: 40px;
   color: #898989;
 }
-.rs-services.style6 .services-wrap .title {
+.rs-services.style6 .services-wrap1 .title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  border-left: 5px solid #dfc3b8;
+}
+.rs-services.style6 .services-wrap2 .title {
   font-weight: 600;
   font-size: 20px;
   line-height: 35px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
-.rs-services.style6 .services-wrap .title a {
+.rs-services.style6 .services-wrap2 .title a {
   color: #ffffff;
 }
-.rs-services.style6 .services-wrap .title a:hover {
+.rs-services.style6 .services-wrap2 .title a:hover {
   color: rgba(244, 117, 33, 255);
 }
 .rs-services.style6 .services-wrap .desc {
@@ -20453,7 +20479,7 @@ body .modal-backdrop {
   color: #e0e0e0;
 }
 .rs-footer .footer-content .address-widget li {
-  margin-bottom: 24px;
+  margin-bottom: 10px;
 }
 .rs-footer .footer-content .address-widget li i {
   float: left;
